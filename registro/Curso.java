@@ -2,7 +2,7 @@
 package registro;
 
 
-public class Curso extends Grado{
+public class Curso extends Grado {
     private String codigo_curso;
     private String nombre_curso;
 
