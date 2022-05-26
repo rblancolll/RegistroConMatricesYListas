@@ -1,5 +1,6 @@
 package registro;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -10,9 +11,11 @@ public class Registro {
     Scanner leer = new Scanner(System.in);
   
         
-        Alumno a[]= new Alumno[1];
-        Curso b[]= new Curso[1];
-        Grado c[]= new Grado[1];
+        Alumno a[]= new Alumno[2];
+        Curso b[]= new Curso[2];
+        Grado c[]= new Grado[2];
+       
+       
         
        String codigo ;
        String nombre ;
@@ -50,8 +53,15 @@ public class Registro {
            c[i] = new Grado(codigo_grado,descripcion);
         }
             for(int i=0;i<a.length;i++){
-            System.out.println("Codigo: "+a[i].getCodigo()+" "+"Nombre: "+a[i].getNombre()+" "+"Alias: "+a[i].getAlias()+" "+"Correo: "+a[i].getCorreo()+" "+"Telefono: "+a[i].getTelefono()+" "+"Codigo del curso: "+b[i].getCodigo_Curso()+" "+"Nombre del curso: "+b[i].getNombre_Curso()+" "+"Codigo del Grado: "+c[i].getCodigo_Grado()+" "+"Descripcion: "+c[i].getDescripcion());
-    }
+            System.out.println("Codigo: "+a[i].getCodigo()+" "+"Nombre: "+a[i].getNombre()+" "+"Alias: "+a[i].getAlias()+" "+"Correo: "+a[i].getCorreo()+" "+"Telefono: "+a[i].getTelefono());
+                  }       
+           for(int i=0;i<b.length;i++){
+              System.out.println("Codigo del curso: "+b[i].getCodigo_Curso()+" "+"Nombre del curso: "+b[i].getNombre_Curso());
+           }
+   
+              for(int i=0;i<c.length;i++){
+              System.out.println("Codigo del Grado: "+c[i].getCodigo_Grado()+" "+"Descripcion: "+c[i].getDescripcion());
+              }
     
     }
 }
